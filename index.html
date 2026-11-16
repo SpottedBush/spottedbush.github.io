@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gradatim — climb one habit at a time</title>
+<meta name="description" content="Gradatim is a desktop coaching app for League of Legends players: factual post-game reports, one improvement focus at a time, and an AI coach that answers from your own games.">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="#" aria-label="Gradatim, home">
+    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+      <defs>
+        <mask id="eyes" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+          <rect width="32" height="32" fill="#fff"/>
+          <circle cx="13" cy="13.4" r="1.25" fill="#000"/><circle cx="16.4" cy="13.4" r="1.25" fill="#000"/>
+        </mask>
+      </defs>
+      <path d="M2 29.5H30V9.5H23V15H16V20.5H9V26H2Z" fill="currentColor" opacity=".18"/>
+      <path d="M2 26H9V20.5H16V15H23V9.5H30" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M7.4 17.6C6.2 17.4 5.9 15.6 7 14.8 6.6 13 8 11.8 9.6 12.2 9.8 10.4 11.6 9.3 13.3 9.9 14.3 8.6 16.5 8.6 17.3 10.2 19 10 20.3 11.6 19.7 13.2 20.9 13.9 20.8 15.7 19.6 16.3 19.6 17 19 17.4 18.3 17.4Z" fill="currentColor" mask="url(#eyes)"/>
+      <path d="M10.6 17.6 10.1 20.5M15.6 17.5 17.7 15M19 14.2l2.3-1.8M7.1 15.8l-2.4 1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    <span class="brand-text"><b>Gradatim</b><small>by Spotted Bush</small></span>
+  </a>
+  <nav class="links" aria-label="Sections">
+    <a href="#features">Features</a>
+    <a href="#screens">Screenshots</a>
+    <a href="#data">Data &amp; privacy</a>
+    <a href="#beta">Beta</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Climb one habit at a time.</h1>
+    <p class="lead">Gradatim is a coaching app for League of Legends players. After every ranked game it tells you,
+      with numbers, what cost you the game, and it keeps you on <strong>one improvement focus</strong> until it
+      sticks. You judge your sessions on the habits you track, not on your win count.</p>
+    <p class="actions">
+      <a class="btn" href="#beta">Join the beta</a>
+      <a class="btn ghost" href="#screens">See the app</a>
+      <span class="meta">Desktop app for Windows, in closed beta.</span>
+    </p>
+    <figure class="shot hero-shot">
+      <img src="img/overview.png" width="1440" height="960" alt="Gradatim's overview: the player's current focus, the briefing before a session, the stop-loss rule and the last games.">
+    </figure>
+  </section>
+
+  <section id="features" class="block">
+    <h2>What it does</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>A factual report after each game</h3>
+        <p>Avoidable deaths, fights taken outnumbered, side-lane deaths without vision, absences from major
+          objectives, lane leads that were lost, your build and skill order. Every finding comes with the minute it
+          happened, so you can check it in the replay.</p>
+      </article>
+      <article class="card">
+        <h3>One focus at a time</h3>
+        <p>You pick one habit to fix, for example “no solo death in lane”. Gradatim tracks it game after game and
+          shows your progress towards a goal, then moves you to the next one.</p>
+      </article>
+      <article class="card">
+        <h3>An AI coach that reads your games</h3>
+        <p>A text coach writes a short review of each game and answers your questions, grounded in the facts of that
+          game. It is clearly labelled as an AI (Claude, by Anthropic) and is reserved for players aged 18 and over.</p>
+      </article>
+      <article class="card">
+        <h3>A stop-loss that advises</h3>
+        <p>After a run of losses or a chain of deaths, Gradatim suggests a break or the end of the session. It only
+          advises: it never blocks the client or a queue, and never plays or decides for you.</p>
+      </article>
+      <article class="card">
+        <h3>Weekly recaps</h3>
+        <p>Every week (with the subscription), a recap of your focus, your sessions and your stats, compared with your own start rather than
+          with other players.</p>
+      </article>
+      <article class="card">
+        <h3>Nothing during the game</h3>
+        <p>Gradatim shows nothing during champion select or while you play, and gives no information you could not
+          see yourself. Everything happens before and after your games.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="screens" class="block">
+    <h2>Screenshots</h2>
+    <p class="note">Real data from the author's own account. The app is available in English and French.</p>
+    <div class="shots">
+      <figure class="shot">
+        <img src="img/game-deaths.png" width="1440" height="960" loading="lazy" alt="Post-game report: every death of the game on the map and in a table, with the time, the zone, the enemies involved and why it was flagged.">
+        <figcaption>Post-game report: every death, where, against whom, and why it was flagged.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="img/ai-review.png" width="1440" height="960" loading="lazy" alt="The AI coach's review of a game, with the notice that the coach is an AI and can be wrong.">
+        <figcaption>The coach's review of a game, labelled as an AI that can be wrong.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="img/performance.png" width="1440" height="960" loading="lazy" alt="Performance tab: gold, CS and XP difference at 14 minutes, lanes won and converted, gold difference distribution.">
+        <figcaption>Lane phase over your last 20 games.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="img/reviews.png" width="1440" height="960" loading="lazy" alt="Coaching tab: the list of game reviews, with whether the focus was respected in each game.">
+        <figcaption>Every review, and whether the focus was respected.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="data" class="block">
+    <h2>Data &amp; privacy</h2>
+    <div class="grid two">
+      <article class="card">
+        <h3>Where the game data comes from</h3>
+        <ul>
+          <li><strong>Riot Games API</strong>: ACCOUNT-V1 (find your account from your Riot ID), MATCH-V5 (your
+            ranked games and their timelines), LEAGUE-V4 (your rank and LP). Only the games of the player using the
+            app.</li>
+          <li><strong>The League client on your PC</strong>, read only: your logged-in account, your rank, your
+            recent games. Gradatim never sends anything to the client.</li>
+          <li><strong>The game's live data on your PC</strong> (Live Client Data API), read only, saved during your
+            own game for the post-game report. Nothing is shown while you play.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>What we keep</h3>
+        <ul>
+          <li>Your games and reports stay in the app's folder on your PC.</li>
+          <li>In the released app, Riot API calls go through our server: the API key is never shipped in the
+            app.</li>
+          <li>The AI coach receives the facts of the game it reviews, without your name, Riot ID or the other
+            players' names.</li>
+          <li>Deleting your account will delete the game data we hold for it.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="beta" class="block">
+    <h2>Beta &amp; pricing</h2>
+    <div class="grid two">
+      <article class="card">
+        <h3>Closed beta, French-speaking first</h3>
+        <p>Gradatim is in a closed beta with a small group of French-speaking players, invited through the Spotted
+          Bush community. The public release will follow.</p>
+        <p>Access is by invitation for now.</p>
+      </article>
+      <article class="card">
+        <h3>Free, with an optional subscription</h3>
+        <p>Everything the app computes on your PC is free and unlimited: game reports, stats, focus tracking,
+          the briefing and the stop-loss. The free plan also includes three AI coach reviews a week.</p>
+        <p>An optional subscription (around €10 a month) adds the coach's review after every game, the
+          conversation with the coach and the weekly recaps. No ads, ever. Beta testers get the full coach for
+          free.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Gradatim is made by Spotted Bush, a French-speaking League of Legends streamer and coach.</p>
+  <p class="legal">Gradatim isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or
+    anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated
+    properties are trademarks or registered trademarks of Riot Games, Inc.</p>
+  <p class="legal">Montserrat font: SIL Open Font License (<a href="fonts/OFL.txt">OFL.txt</a>).</p>
+</footer>
+
+</body>
+</html>

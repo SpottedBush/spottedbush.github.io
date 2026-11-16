@@ -1,0 +1,105 @@
+/* Gradatim's public page: same palette as the app (app/style.css, app/design.md), dark only like the app's default. */
+@font-face {
+  font-family: "Montserrat"; font-style: normal; font-weight: 700 800; font-display: swap;
+  src: url("fonts/montserrat-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Montserrat"; font-style: normal; font-weight: 700 800; font-display: swap;
+  src: url("fonts/montserrat-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+:root {
+  color-scheme: dark;
+  --page: #0a1410;
+  --surface: #11211a;
+  --surface-2: #182c23;
+  --border: rgba(214, 255, 226, 0.10);
+  --border-strong: rgba(214, 255, 226, 0.18);
+  --text: #f2f7f3;
+  --text-2: #c4d4ca;
+  --muted: #90aa9c;
+  --accent: #10ff07;
+  --accent-soft: rgba(16, 255, 7, 0.08);
+  --accent-line: rgba(16, 255, 7, 0.55);
+  --brand-font: "Montserrat", system-ui, sans-serif;
+  --font: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
+  font: 16px/1.6 var(--font);
+  min-height: 100vh;
+}
+/* the app's fixed lights and dot grid */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(60% 45% at 12% 0%, rgba(16, 255, 7, 0.14), transparent 70%),
+    radial-gradient(50% 40% at 95% 30%, rgba(53, 150, 240, 0.08), transparent 70%),
+    radial-gradient(#1b3127 1px, transparent 1px) 0 0 / 22px 22px;
+}
+a { color: var(--text); }
+a:hover { color: var(--accent); }
+
+.top {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  max-width: 1120px; margin: 0 auto; padding: 20px 16px;
+}
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--accent); }
+.mark { width: 36px; height: 36px; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+.brand-text b { font-family: var(--brand-font); font-weight: 800; font-size: 19px; letter-spacing: .4px; text-transform: uppercase; }
+.brand-text small { color: var(--text-2); font-size: 12px; }
+.links { display: flex; gap: 20px; flex-wrap: wrap; }
+.links a { text-decoration: none; color: var(--text-2); font-size: 15px; }
+.links a:hover { color: var(--accent); }
+
+main { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+.hero { padding: 48px 0 24px; }
+.meta { color: var(--muted); font-size: 14px; align-self: center; }
+h1 { font-family: var(--brand-font); font-weight: 800; font-size: clamp(34px, 6vw, 56px); line-height: 1.08; margin: 0 0 18px; max-width: 16ch; }
+.lead { color: var(--text-2); font-size: 18px; max-width: 62ch; margin: 0 0 28px; }
+.lead strong { color: var(--text); }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 0 0 40px; }
+.btn {
+  display: inline-block; padding: 12px 20px; border-radius: 10px; text-decoration: none; font-weight: 700;
+  background: var(--accent); color: var(--page); border: 1px solid var(--accent);
+}
+.btn:hover { color: var(--page); filter: brightness(1.1); }
+.btn.ghost { background: transparent; color: var(--text); border-color: var(--border-strong); }
+.btn.ghost:hover { color: var(--accent); border-color: var(--accent-line); filter: none; }
+
+.shot { margin: 0; }
+.shot img {
+  display: block; width: 100%; height: auto; border-radius: 12px;
+  border: 1px solid var(--border-strong); box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
+}
+.hero-shot img { border-color: var(--accent-line); }
+.shot figcaption { color: var(--muted); font-size: 14px; margin-top: 10px; }
+
+.block { padding: 56px 0 8px; }
+h2 { font-family: var(--brand-font); font-weight: 800; font-size: 26px; margin: 0 0 20px; }
+h3 { font-size: 17px; margin: 0 0 8px; }
+.note { color: var(--muted); margin: -8px 0 20px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.grid.two { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; }
+.card p, .card li { color: var(--text-2); margin: 0; }
+.card ul { margin: 0; padding-left: 18px; display: grid; gap: 8px; }
+.card strong { color: var(--text); }
+.card p + p { margin-top: 12px; }
+.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 28px 24px; }
+
+.foot { max-width: 1120px; margin: 72px auto 0; padding: 28px 16px 40px; border-top: 1px solid var(--border); color: var(--text-2); font-size: 14px; }
+.foot p { margin: 0 0 10px; }
+.foot .legal { color: var(--muted); font-size: 13px; max-width: 90ch; }
+
+@media (max-width: 520px) {
+  .grid, .grid.two, .shots { grid-template-columns: 1fr; }
+  .links { gap: 14px; }
+  .lead { font-size: 17px; }
+}
